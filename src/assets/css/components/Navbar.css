@@ -1,5 +1,5 @@
 .navbar {
-    background-color: white;
+    background-color: rgb(48, 46, 46);
     border-bottom: 1px solid #eaeaea;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   }
@@ -32,15 +32,16 @@
     display: flex;
     align-items: center;
     margin-left: 16px;
+    color:white;
   }
   
   .navbar-location-other {
-    color: #4a4a4a;
+    color: #ebe2e2;
     margin-left: 4px;
   }
   
   .navbar-location-detail {
-    color: #4a4a4a;
+    color: #eae0e0;
     margin-left: 8px;
     font-size: 12px;
   }
@@ -51,7 +52,7 @@
   }
   
   .navbar-link {
-    color: #4a4a4a;
+    color: #f5efef;
     margin-left: 16px;
     text-decoration: none;
     display: flex;
@@ -64,7 +65,7 @@
   }
   
   .navbar-link:hover {
-    color: #1a1a1a;
+    color: #f4bcbc;
   }
   
   .navbar-new {
@@ -73,7 +74,8 @@
   }
   
   .navbar-cart {
-    color: #4a4a4a;
+    color: #eae7e7;
     margin-left: 4px;
+    
   }
   
