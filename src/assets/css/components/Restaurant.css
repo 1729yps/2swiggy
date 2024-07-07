@@ -1,62 +1,35 @@
 .restaurant-container {
-  width: 1300px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 20px;
-  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f8f8f8;
 }
 
 .restaurant-card {
-  position: relative;
-  width: 100%; /* Adjusted to fit within grid */
-  height: 350px;
   background: #fff;
-  border-radius: 4px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  overflow: hidden;
+  width: 300px;
 }
 
-.restaurant-card:before,
-.restaurant-card:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
+.restaurant-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.imgBx {
+  position: relative;
   width: 100%;
-  height: 100%;
-  border-radius: 4px;
-  background: #fff;
-  transition: 0.5s;
-  z-index: -1;
+  padding-top: 75%; /* 4:3 Aspect Ratio */
+  overflow: hidden;
 }
 
-.restaurant-card:hover:before {
-  transform: rotate(20deg);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
-}
-
-.restaurant-card:hover:after {
-  transform: rotate(10deg);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
-}
-
-.restaurant-card .imgBx {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  bottom: 10px;
-  right: 10px;
-  background: #222;
-  transition: 0.5s;
-  z-index: 1;
-}
-
-.restaurant-card:hover .imgBx {
-  bottom: 80px;
-}
-
-.restaurant-card .imgBx img {
+.restaurant-image {
   position: absolute;
   top: 0;
   left: 0;
@@ -65,43 +38,36 @@
   object-fit: cover;
 }
 
-.restaurant-card .details {
-  position: absolute;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
-  height: 60px;
+.details {
+  padding: 15px;
   text-align: center;
 }
 
-.restaurant-card .details h2 {
-  margin: 0;
-  padding: 0;
-  font-weight: 600;
-  font-size: 20px;
-  color: #777;
-  text-transform: uppercase;
+.details h2 {
+  font-size: 1.2em;
+  margin: 10px 0;
 }
 
-.restaurant-card .details h2 span {
-  font-weight: 500;
-  font-size: 16px;
-  color: #f38695;
+.details span {
   display: block;
-  margin-top: 5px;
+  font-size: 0.9em;
+  color: #888;
 }
 
 .restaurant-rating {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5px;
-  margin: 5px 0;
-  color: orange;
+  font-size: 1em;
+  color: #ff9529;
+}
+
+.restaurant-rating svg {
+  margin-right: 5px;
 }
 
 .restaurant-cuisines {
-  font-size: 12px;
-  margin: 5px 0;
-  color: gray;
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 5px;
 }
